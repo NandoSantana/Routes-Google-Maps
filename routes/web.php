@@ -15,5 +15,5 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('googlemap', 'LiveGmapController@map');
+Route::post('upload', 'LiveGmapController@UploadMap');
 Route::get('googlemap/direction', 'LiveGmapController@direction');

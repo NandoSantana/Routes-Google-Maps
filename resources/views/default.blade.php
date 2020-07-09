@@ -6,7 +6,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <meta name="description" content="">
    <meta name="author" content="">
-   <title>SB Admin 2 - Bootstrap Admin Theme</title>
+   <title>Programar Rota</title>
    <!-- Bootstrap Core CSS -->
    <link href="{!! asset('css/bootstrap.min.css') !!}" rel="stylesheet">
 
@@ -24,8 +24,12 @@
                     </div>
                     <div class="col-12">
                         <input type="file" class="" id="exampleFormControlFile1">
+                        <input type="hidden" name="_token" id="token" value="{{ csrf_token() }}">
                     </div>
-    
+                    <br/>
+                    <div class="col-12">
+                        <input type="submit" class="btn btn-primary" value="Programar rota">
+                    </div>
                 </form>
             </div>
       </div>
