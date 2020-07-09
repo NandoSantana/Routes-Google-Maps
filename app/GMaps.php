@@ -2381,7 +2381,7 @@ class GMaps
         // latitude e longitude
         if ($this->geocodeCaching) { // if caching of geocode requests is activated
 
-            $geocache = DB::table($this->geoCacheTableName)->select("latitude","longitude")->where("address", trim(strtolower($address)))->first();
+            $geocache = DB::table($this->geoCacheTableName)->select("latitude","longitude")->where("endereco", trim(strtolower($address)))->first();
 
             if ($geocache) {
 
@@ -2416,7 +2416,7 @@ class GMaps
             if ($this->geocodeCaching) { // if we to need to cache this result
                 if ($address != "" && $lat != 0 && $lng != 0) {
                     $data = array(
-                        "address" => trim(strtolower($address)),
+                        "endereco" => trim(strtolower($address)),
                         "latitude" => $lat,
                         "longitude" => $lng,
                     );

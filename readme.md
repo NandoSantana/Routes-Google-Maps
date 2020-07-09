@@ -13,3 +13,6 @@ Add File sharing path Nginx e FPM:
  - /Applications/MAMP/www/nameproject/run/var
  - /Applications/MAMP/www/nameproject/run
  - /Applications/MAMP/www/nameproject
+
+
+ access as localhost

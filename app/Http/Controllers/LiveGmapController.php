@@ -30,19 +30,7 @@ class LiveGmapController extends Controller
         $gmapconfig['geocodeCaching'] = false;
     
         $gmapconfig['directions'] = true;
-        
-        // for ($i=0; $i < 2; $i++) { 
-        //     # code...
-        //     $gmapconfig['directionsStart'][$i] = 'Rua barão de Ibituruna 90 - caiçara, Brasil';
-        //     $gmapconfig['directionsEnd'][$i] = 'Av. carlos luz 200, Brasil';
-
-        //     $gmapconfig['directionsStart'][$i] = 'Av. carlos luz 208, Brasil';
-        //     $gmapconfig['directionsEnd'][$i] = 'R. Belmiro braga 1350 - Caiçara, Brasil';
-           
-        //     //dump($gmapconfig['directionsStart']);
-        //     //dump($gmapconfig['directionsEnd']);
-        // }
-        //$gmapconfig['directionsStart'][] = '';
+     
         $paths[] = null;
             // lista completa
         foreach ($paths as $key ) {
@@ -52,9 +40,6 @@ class LiveGmapController extends Controller
 
             $paths['paths'][] = 'Av. carlos luz 208, Brasil';
             $paths['paths'][] = 'R. Belmiro braga 1350 - Caiçara, Brasil';
-            
-
-
 
         }
         // trata a origem e destino
@@ -69,26 +54,15 @@ class LiveGmapController extends Controller
         $eliminateEnd = array_pop($paths['paths']);
     
 
-        //dd($paths['paths']);
-        
-       // dd($paths['directions']);
         $gmapconfig['directionsStart'] = $first_value;
         $gmapconfig['directionsEnd'] = $last_value; 
         
         $gmapconfig['paths'] = $paths['paths'];
-        //dd($gmapconfig);
-        // $gmapconfig['directionsStart'] = [];
-        // $gmapconfig['directionsStart'] = 'Rua barão de Ibituruna 90 - caiçara, Brasil';
-        // $gmapconfig['directionsEnd'] = 'Av. carlos luz 200, Brasil';
-
-        // $gmapconfig['directionsStart'] = 'Av. carlos luz 200, Brasil';
-        // $gmapconfig['directionsEnd'] = 'R. Belmiro braga 1350 - Caiçara, Brasil';
 
         $gmapconfig['directionsDivID'] =  'directionsDiv';
     
         $livegooglemap = new GMaps();
         $livegooglemap->initialize($gmapconfig);
-        //$livegooglemap->add_marker();
         $map = $livegooglemap->create_map();
         
         return view('map',compact('map'));
