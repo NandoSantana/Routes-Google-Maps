@@ -42,3 +42,4 @@
 2020/07/09 02:12:24 [error] 6#6: *3 open() "/var/www/html/public/theme/dist/js/sb-admin-2.js" failed (2: No such file or directory), client: 192.168.112.1, server: localhost, request: "GET /theme/dist/js/sb-admin-2.js HTTP/1.1", host: "localhost", referrer: "http://localhost/googlemap"
 2020/07/09 02:12:25 [error] 6#6: *7 open() "/var/www/html/public/js/bootstrap.min.js" failed (2: No such file or directory), client: 192.168.112.1, server: localhost, request: "GET /js/bootstrap.min.js HTTP/1.1", host: "localhost", referrer: "http://localhost/googlemap"
 2020/07/09 02:12:25 [error] 6#6: *7 open() "/var/www/html/public/theme/dist/js/sb-admin-2.js" failed (2: No such file or directory), client: 192.168.112.1, server: localhost, request: "GET /theme/dist/js/sb-admin-2.js HTTP/1.1", host: "localhost", referrer: "http://localhost/googlemap"
+2020/07/09 18:43:48 [emerg] 1#1: host not found in upstream "fpm" in /etc/nginx/conf.d/app.vhost:27

@@ -1,4 +1,4 @@
-version: '3.7'
+version: '3.8'
 
 services:
 
@@ -12,6 +12,8 @@ services:
         - "9000:9000"
       links:
         - mysql
+    
+  
     
     nginx:
       build:
@@ -27,23 +29,27 @@ services:
         - "443:443"
       links:
         - fpm
+     
     
 
     mysql:
-      image: mysql:5.7
+      image: mysql:5.6
       container_name: mysql
+      command: mysqld --user=root --verbose
       environment:
-        - MYSQL_ROOT_PASSWORD=secret
-        - MYSQL_DATABASE=db
-        - MYSQL_USER=dbuser
+        - MYSQL_ALLOW_EMPTY_PASSWORD="yes"
+        - MYSQL_ROOT_PASSWORD=root
+        - MYSQL_DATABASE=laravel
+        - MYSQL_USER=root
       ports:
         - 33061:3306
       volumes:
         - ./run/var:/var/lib/mysql
       
-
+      
+       
 networks:
   backend:
-    name: backend-network
+    driver: bridge
 
    
