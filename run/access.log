@@ -231,3 +231,6 @@
 172.20.0.1 - - [09/Jul/2020:04:04:32 +0000] "GET /upload HTTP/1.1" 405 408256 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
 172.20.0.1 - - [09/Jul/2020:04:04:51 +0000] "POST /upload HTTP/1.1" 500 631374 "http://localhost/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
 172.20.0.1 - - [09/Jul/2020:04:05:37 +0000] "POST /upload HTTP/1.1" 200 10461 "http://localhost/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+172.20.0.1 - - [09/Jul/2020:04:08:39 +0000] "GET /upload HTTP/1.1" 405 408179 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+172.20.0.1 - - [09/Jul/2020:04:08:50 +0000] "POST /upload HTTP/1.1" 302 402 "http://localhost/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+172.20.0.1 - - [09/Jul/2020:04:08:52 +0000] "GET /googlemap/direction HTTP/1.1" 200 1991 "http://localhost/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"

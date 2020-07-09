@@ -12,14 +12,8 @@ class LiveGmapController extends Controller
 
     public function UploadMap(Request $request)
     {
-        // $gmapconfig['center'] = 'Rajkot Railway Station,India';
-        // $gmapconfig['zoom'] = '14';
-        // $gmapconfig['map_height'] = '400px';
-        // $livegooglemap = new GMaps();
-        // $livegooglemap->initialize($gmapconfig);
         dd($request);
-        // $map = $livegooglemap->create_map();
-        //return view('home',compact('map'));
+        return redirect(url('googlemap/direction'));
     }
 
     public function direction()
