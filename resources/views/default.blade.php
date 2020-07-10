@@ -24,7 +24,10 @@
                     </div>
                     <div class="col-12">
                         <input type="file" class="" id="exampleFormControlFile1">
-                        <input type="hidden" name="_token" id="token" value="{{ csrf_token() }}">
+                        <!-- <input type="hidden" name="_token" id="token" value="{{ csrf_token() }}"> -->
+                        @csrf  
+
+                        @method('POST')
                     </div>
                     <br/>
                     <div class="col-12">

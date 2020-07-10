@@ -2180,7 +2180,9 @@ class GMaps
                         $directionsWaypointStr .= ',';
                     }
 
-                    $directionsWaypointStr .= '{ location: "'.$waypoint.'", stopover: true}';
+                    //Lembrete: implementar do banco de dados
+                    
+                    $directionsWaypointStr .= '{ location: "'.$waypoint->endereco.'", stopover: true}';
                 }
                 $this->output_js_contents .= ', waypoints: ['.$directionsWaypointStr.']';
 
@@ -2208,10 +2210,11 @@ class GMaps
 
             $this->output_js_contents .= '
             };
+                console.log("request",request);
                 directionsService.route(request, function(response, status) {
                     if (status == google.maps.DirectionsStatus.OK) {
                         directionsDisplay.setDirections(response);
-                       console.log(response);
+                        console.log("response",response);
                     }else{
                         switch (status) {
                             case "NOT_FOUND": { alert("Either the start location or destination were not recognised"); break }

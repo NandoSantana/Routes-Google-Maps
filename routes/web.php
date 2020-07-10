@@ -15,5 +15,10 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::post('upload', 'LiveGmapController@UploadMap');
+Route::get('/clear-cache', function() {
+    Artisan::call('cache:clear');
+    return "Cache is cleared";
+});
+
+Route::post('/upload', 'LiveGmapController@uploadMap');
 Route::get('googlemap/direction', 'LiveGmapController@direction');
