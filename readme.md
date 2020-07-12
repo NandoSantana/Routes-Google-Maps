@@ -14,7 +14,15 @@ Add File sharing path Nginx e FPM:
  - /Applications/MAMP/www/nameproject/run
  - /Applications/MAMP/www/nameproject
 
+## Import Database file
+    - db-google-routes.sql
+
+## Command build Docker
+    docker-compose build
+    docker-compose up
+
 ## Get Ip containers
     docker inspect -f '{{.Name}} - {{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' $(docker ps -aq)
 
  ## access as localhost
+

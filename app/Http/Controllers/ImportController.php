@@ -69,7 +69,7 @@ class ImportController extends Controller {
         }
 
         return redirect(url('googlemap/direction'));
-}
+        }
 
 
 }
