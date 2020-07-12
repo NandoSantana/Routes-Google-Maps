@@ -8,6 +8,9 @@
 </p>
 
 # Routes-Google-Maps - HOW INSTALL?
+## Command composer
+    - composer update
+
 ## Docker
 Add File sharing path Nginx e FPM:
  - /Applications/MAMP/www/nameproject/run/var
@@ -18,8 +21,9 @@ Add File sharing path Nginx e FPM:
     - db-google-routes.sql
 
 ## Command build Docker
-    docker-compose build
-    docker-compose up
+    - docker-compose build
+    - docker-compose up
+
 
 ## Get Ip containers
     docker inspect -f '{{.Name}} - {{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' $(docker ps -aq)

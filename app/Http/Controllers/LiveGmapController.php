@@ -28,16 +28,21 @@ class LiveGmapController extends Controller
         $paths[] = null;
 
         $ways = Info::All();
-       
+        $way = NULL;
         for ($i=0; $i < count($ways) ; $i++) { 
             # code...
             $way['path'][] = $ways[$i];
             
         }
        
-        $last_key = array_key_last($way['path']);
-        $last_value = $way['path'][$last_key]->endereco;
-
+        if($way != NULL)
+        {
+            $last_key = array_key_last($way['path']);
+            $last_value = $way['path'][$last_key]->endereco;
+        } else {
+            return redirect(url('/'));
+        }
+        
         // trata para o trajeto do meio
         //$middlePath = array_shift($way['path']);
         //$eliminateEnd = array_pop($way['path']);
