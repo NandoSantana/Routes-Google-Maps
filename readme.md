@@ -28,5 +28,5 @@ Add File sharing path Nginx e FPM:
 ## Get Ip containers
     docker inspect -f '{{.Name}} - {{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' $(docker ps -aq)
 
- ## access as localhost
+ ## access as http://localhost
 

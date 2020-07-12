@@ -26,3 +26,7 @@ Route::get('googlemap/direction', 'LiveGmapController@direction');
 /// import csv
 Route::post('/import_parse', 'ImportController@parseImport')->name('import_parse');
 Route::post('/import_process', 'ImportController@processImport')->name('import_process');
+
+
+// export CSV and list
+Route::get('routes','RoutesController@index')->name('users.index');
