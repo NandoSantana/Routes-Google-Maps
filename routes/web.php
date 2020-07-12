@@ -22,3 +22,7 @@ Route::get('/clear-cache', function() {
 
 Route::post('/upload', 'LiveGmapController@uploadMap');
 Route::get('googlemap/direction', 'LiveGmapController@direction');
+
+/// import csv
+Route::post('/import_parse', 'ImportController@parseImport')->name('import_parse');
+Route::post('/import_process', 'ImportController@processImport')->name('import_process');

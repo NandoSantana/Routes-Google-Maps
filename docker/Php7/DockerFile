@@ -30,6 +30,14 @@ RUN apt-get install libmcrypt-dev
 RUN pecl install mcrypt-1.0.1 && docker-php-ext-enable mcrypt
 
 
+#install some base extensions
+RUN apt-get install -y \
+        libzip-dev \
+        zip \
+  && docker-php-ext-configure zip --with-libzip \
+  && docker-php-ext-install zip
+
+
 #PDO - CUSTOMIZAR A SEU DISPOR
 RUN docker-php-ext-install pdo_mysql
 

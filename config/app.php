@@ -229,5 +229,8 @@ return [
        // 'GMaps' => FarhanWazir\GoogleMaps\Facades\GMapsFacade::class,
 
     ],
+    'db_fields' => [
+        'nome','email','datanasc','cpf','endereco','cep'     
+    ],
 
 ];

@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Info extends Model
 {
     //
-    public $fillable = ['endereco', 'longitude', 'latitude'];
+    public $fillable = ['nome', 'email', 'datanasc', 'cpf', 'endereco', 'cep', 'longitude', 'latitude'];
     protected $table = "info";
 
 }

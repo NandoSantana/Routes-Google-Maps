@@ -18,12 +18,28 @@
        <div id="" class="container">
            <br/><br/><br/>
             <div class="row justify-content-center">
-                <form method="POST" action="{{url('/upload')}}">     
+                <form method="POST" action="{{url('/import_parse')}}" enctype="multipart/form-data">     
                     <div class="col-12">
                         <label for="exampleFormControlFile1">Upload de arquivo CSV</label>
                     </div>
                     <div class="col-12">
-                        <input type="file" class="" id="exampleFormControlFile1">
+                        <div class="form-group {{ $errors->has('csv_file') ? ' has-error' : '' }}">
+                            <input type="file" name="csv_file" id="exampleFormControlFile1">
+                        </div>
+                        @if ($errors->has('csv_file'))
+                            <span class="help-block">
+                                <strong>{{ $errors->first('csv_file') }}</strong>
+                            </span>
+                        @endif
+                        <div class="form-group">
+                                <div class="col-md-6 col-md-offset-4">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="header" checked> O arquivo tem cabeçalho?
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
                         <!-- <input type="hidden" name="_token" id="token" value="{{ csrf_token() }}"> -->
                         @csrf  
 
